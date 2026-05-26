@@ -6,4 +6,3 @@ const db = new Pool({
 });
 
 module.exports = db;
-s

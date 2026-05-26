@@ -11,7 +11,7 @@ class MemoryCache extends CacheProvider {
   }
   get(key) {
     const item = this.map.get(key);
-    if (item.expiresAt < Date.now() || item == undefined) return {};
+    if (item == undefined || item.expiresAt < Date.now()) return false;
     else return item;
   }
   set(key, value, ttlSeconds) {
