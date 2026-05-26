@@ -1,6 +1,8 @@
 const express = require("express");
 const PORT = 3000;
 
+require("dotenv").config();
+
 const app = express();
 
 const MemoryCache = require("./classes/MemoryCache");
